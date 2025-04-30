@@ -1,0 +1,311 @@
+/* Base Styles */
+:root {
+    --primary-color: #c73a52;
+    --gold-color: #FFD700;
+    --light-orange: #FFE4B5;
+    --light-grey: #f0f0f0;
+    --dark-grey: #666666;
+    --white: #ffffff;
+    --black: #000000;
+  }
+  
+  /* Body and Scrolling Setup */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main Content Wrapper */
+  .main-content-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 60px; /* Space for fixed header */
+    padding-bottom: 100px; /* Space for fixed footer */
+  }
+  
+  /* Section 1: Fixed Top Bar */
+  .detail-top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .back-btn, .add-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--primary-color);
+    padding: 0;
+  }
+  
+  .page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  /* Section 2: Creator Profile */
+  .creator-profile-section {
+    padding: 20px 15px;
+    background-color: var(--white);
+  }
+  
+  .creator-profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--light-grey);
+  }
+  
+  .creator-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--black);
+    margin-right: 10px;
+    line-height: 1.2;
+  }
+  
+  .creator-tag {
+    background-color: var(--light-orange);
+    color: #8B4513;
+    border-radius: 15px;
+    padding: 3px 8px;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .creator-tag i {
+    margin-right: 3px;
+    font-size: 10px;
+    color: var(--gold-color);
+  }
+  
+  .creator-subtext {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--black);
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+  
+  .creator-subtext i {
+    margin-right: 5px;
+    color: var(--primary-color);
+  }
+  
+  /* Section 3: Management Info */
+  .management-section {
+    padding: 15px;
+    background-color: var(--light-grey);
+    margin: 0 0 15px 0;
+  }
+  
+  .management-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: contain;
+    background-color: #333;
+    padding: 2px;
+  }
+  
+  /* Section 4: Social Stats */
+  .social-stats-section {
+    padding: 15px 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-grey);
+    border-top: 1px solid var(--light-grey);
+  }
+  
+  .social-stats-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 15px;
+    gap: 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  .social-stats-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .social-stat {
+    min-width: 80px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .social-stat a {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+  }
+  
+  .social-stat i {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .social-stat span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  /* Section 5: Creator Details */
+  .creator-details-section {
+    padding: 15px;
+    background-color: var(--white);
+  }
+  
+  .detail-row {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-grey);
+  }
+  
+  .detail-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .detail-label {
+    font-size: 12px;
+    color: var(--dark-grey);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .detail-value {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.5;
+  }
+  
+  .category-tag {
+    background-color: var(--light-grey);
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .budget-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+  
+  .budget-row i {
+    font-size: 18px;
+    margin-right: 5px;
+    color: var(--primary-color);
+  }
+  
+  .budget-row span {
+    background-color: var(--light-grey);
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  /* Section 6: Fixed Contact Buttons */
+  .contact-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .contact-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  .contact-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contact-btn {
+    flex: 1;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+  }
+  
+  .call-btn {
+    background-color: #E3F2FD;
+    color: #1976D2;
+  }
+  
+  .whatsapp-btn {
+    background-color: #E8F5E9;
+    color: #388E3C;
+  }
+  
+  .email-btn {
+    background-color: #F3E5F5;
+    color: #8E24AA;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .creator-profile-img {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .creator-name {
+      font-size: 20px;
+    }
+    
+    .contact-btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+    
+    .budget-row span {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
